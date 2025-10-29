@@ -23,10 +23,10 @@ repository               : "patmendoza6745/patmendoza6745.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "profile.jpg"
   name             : "Patrick Mendoza"
   pronouns         : # example: "she/her"  
-  bio              : "Short biography for the left-hand sidebar"
+  bio              : ""
   location         : "Miami Beach, FL"
   employer         : "University of California, Berkeley"
   uri              : # URL
@@ -81,12 +81,14 @@ author:
 
 # Publication Category - The following the list of publication categories and their headings
 publication_category:
-  books:
-    title: 'Books'
-  manuscripts:
-    title: 'Journal Articles'    
-  conferences:
-    title: 'Conference Papers'
+  under_review:
+    title: 'Under Review'
+  preprint:
+    title: 'Preprint'
+  published:
+    title: 'Published'
+  workshop:
+    title: 'Workshop'
 
 # Site Settings
 teaser                   :  # filename of teaser fallback teaser image placed in /images/ for social media previews
