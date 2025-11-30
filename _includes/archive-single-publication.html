@@ -1,0 +1,81 @@
+{% include base_path %}
+
+{% if post.header.teaser %}
+  {% capture teaser %}{{ post.header.teaser }}{% endcapture %}
+{% else %}
+  {% assign teaser = site.teaser %}
+{% endif %}
+
+{% if post.id %}
+  {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
+{% else %}
+  {% assign title = post.title %}
+{% endif %}
+
+{% if post.category %}
+  {% assign category_info = site.publication_category[post.category] %}
+  {% assign category_title = category_info.title | default: post.category | capitalize %}
+{% endif %}
+
+<div class="publication__item">
+  <article class="publication__item-content" itemscope itemtype="http://schema.org/CreativeWork">
+    <div class="publication__wrapper">
+      {% if teaser %}
+      <div class="publication__teaser">
+        <img src=
+          {% if teaser contains "://" %}
+            "{{ teaser }}"
+          {% elsif teaser contains "/" %}
+            "{{ teaser | prepend: base_path }}"
+          {% else %}
+            "{{ teaser | prepend: "/images/" | prepend: base_path }}"
+          {% endif %}
+          alt="{{ title }}">
+      </div>
+      {% endif %}
+      
+      <div class="publication__body">
+        <h2 class="publication__title" itemprop="headline">
+          {% if post.link %}
+            <a href="{{ post.link }}">{{ title }}</a>
+          {% else %}
+            <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ title }}</a>
+          {% endif %}
+        </h2>
+        
+        {% if post.authors %}
+        <p class="publication__authors">
+          {% assign author_name = site.author.name %}
+          {% assign authors_text = post.authors %}
+          {% assign bolded_name = '<strong>' | append: author_name | append: '</strong>' %}
+          {{ authors_text | replace: author_name, bolded_name }}
+        </p>
+        {% endif %}
+        
+        {% if post.category %}
+        <span class="publication__status publication__status--{{ post.category }}">
+          {% if post.category == 'under_review' and post.venue %}
+            Under review at <em>{{ post.venue }}</em>
+          {% elsif post.category == 'published' and post.venue %}
+            Published at <em>{{ post.venue }}</em>
+          {% elsif post.category == 'workshop' and post.venue %}
+            Workshop at <em>{{ post.venue }}</em>
+          {% else %}
+            {{ category_title }}
+          {% endif %}
+        </span>
+        {% endif %}
+        
+        <div class="publication__actions">
+          {% if post.bibtexurl %}
+          <a href="{{ post.bibtexurl }}" class="publication__button publication__button--bib" target="_blank">BIB</a>
+          {% endif %}
+          {% if post.paperurl %}
+          <a href="{{ post.paperurl }}" class="publication__button publication__button--pdf" target="_blank">PDF</a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </article>
+</div>
+
