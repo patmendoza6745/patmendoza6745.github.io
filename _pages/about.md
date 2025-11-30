@@ -7,8 +7,8 @@ redirect_from:
   - /about.html
 ---
 
-Hi there, I'm Patrick. I'm a 4th year at UC Berkeley studying EECS and Applied Math. My research operates within the space of alignment and interpretability, with a particular focus in AI Safety.
+I am a fourth-year undergraduate student at UC Berkeley, studying EECS and Applied Math. My research focuses on AI alignment and interpretability, with a particular emphasis on AI safety.
 
-Currently, I'm an undergraduate researcher in Berkeley's Artifical Intelligence Resarch (BAIR) Lab working on speech-language models under [Cheol Jun Cho](https://cheoljun95.github.io/), [Nicholas Lee](https://www.linkedin.com/in/nicholas-lee-74731916a/), and Professor [Gopala Anumanchipalli](https://people.eecs.berkeley.edu/~gopala/) and with David Wagner's Research Group, in LLM safety under [Zhanhao Hu](https://whothu.github.io/) and Professors [David Wagner](https://people.eecs.berkeley.edu/~daw/) and [Raluca Popa](https://people.eecs.berkeley.edu/~raluca/).
+I am currently an undergraduate researcher in Berkeley's Artificial Intelligence Research (BAIR) Lab, where I work on speech-language models under the supervision of [Cheol Jun Cho](https://cheoljun95.github.io/), [Nicholas Lee](https://www.linkedin.com/in/nicholas-lee-74731916a/), and Professor [Gopala Anumanchipalli](https://people.eecs.berkeley.edu/~gopala/). I also work with David Wagner's Research Group on LLM safety under [Zhanhao Hu](https://whothu.github.io/) and Professors [David Wagner](https://people.eecs.berkeley.edu/~daw/) and [Raluca Popa](https://people.eecs.berkeley.edu/~raluca/).
 
-Outside of school, I am a huge soccer fan, and I have 4 cats!
+Outside of school, I enjoy soccer and spending time with my four cats.
