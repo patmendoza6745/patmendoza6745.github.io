@@ -423,3 +423,23 @@
     }
   }
 }
+
+/*
+   Teaching teaser (smaller images)
+   ========================================================================== */
+
+.teaching__teaser {
+  max-width: 100px !important;
+  max-height: 100px !important;
+
+  @include breakpoint($small) {
+    width: 100px !important;
+    height: 100px !important;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
