@@ -56,10 +56,10 @@
         <span class="publication__status publication__status--{{ post.category }}">
           {% if post.category == 'under_review' and post.venue %}
             Under review at <em>{{ post.venue }}</em>
-          {% elsif post.category == 'published' and post.venue %}
-            Published at <em>{{ post.venue }}</em>
-          {% elsif post.category == 'workshop' and post.venue %}
-            Workshop at <em>{{ post.venue }}</em>
+          {% elsif post.category == 'preprint' %}
+            {{ category_title }}
+          {% elsif post.venue %}
+            <em>{{ post.venue }}</em>
           {% else %}
             {{ category_title }}
           {% endif %}
