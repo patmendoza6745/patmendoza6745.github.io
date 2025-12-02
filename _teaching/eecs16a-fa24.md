@@ -16,7 +16,7 @@ EECS 16A is an introductory-level course that introduces students to the systems
 ## My Responsibilities
 
 * Grading homework and exams.
-* Debugging homnework questions each week.
+* Debugging homework questions each week.
 * Composing exam questions with their solutions.
 * Running two or more office hours per week.
 
