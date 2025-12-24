@@ -9,6 +9,8 @@ redirect_from:
 
 I am a fourth-year student at UC Berkeley, studying EECS and Applied Math. My research focuses on AI alignment and interpretability, with a particular emphasis on AI safety.
 
-Currently, I am working at xAI as a Member of Technical Staff. I am also an undergraduate researcher in Berkeley's Artificial Intelligence Research (BAIR) Lab, where I work on speech-language models under the supervision of [Cheol Jun Cho](https://cheoljun95.github.io/), [Nicholas Lee](https://www.linkedin.com/in/nicholas-lee-74731916a/), and Professor [Gopala Anumanchipalli](https://people.eecs.berkeley.edu/~gopala/), as well as with David Wagner's Research Group on LLM safety under [Zhanhao Hu](https://whothu.github.io/) and Professors [David Wagner](https://people.eecs.berkeley.edu/~daw/) and [Raluca Popa](https://people.eecs.berkeley.edu/~raluca/).
+Most recently, I joined xAI as a Member of Technical Staff, where I'm working on Grokepedia. 
+
+I'm also an undergraduate researcher in Berkeley's Artificial Intelligence Research (BAIR) Lab, working on speech-language models under the supervision of [Cheol Jun Cho](https://cheoljun95.github.io/), [Nicholas Lee](https://www.linkedin.com/in/nicholas-lee-74731916a/), and Professor [Gopala Anumanchipalli](https://people.eecs.berkeley.edu/~gopala/). Additionally, I work with David Wagner's Research Group on LLM safety under [Zhanhao Hu](https://whothu.github.io/) and Professor [David Wagner](https://people.eecs.berkeley.edu/~daw/).
 
 Outside of school, I enjoy soccer and spending time with my four cats!
