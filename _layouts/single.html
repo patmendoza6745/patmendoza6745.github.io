@@ -70,6 +70,10 @@ layout: default
             <a href="{{ page.paperurl }}" class="publication__button publication__button--pdf" target="_blank">PDF</a>
             {% endif %}
           </div>
+        {% elsif page.collection == 'professional' %}
+          {% if page.venue %}
+            <p>Based in {{ page.venue }}</p>
+          {% endif %}
         {% elsif page.venue and page.date %}
           <p>Published in <i>{{ page.venue }}</i>, {{ page.date | default: "1900-01-01" | date: "%Y" }} </p>
         {% elsif page.date %}

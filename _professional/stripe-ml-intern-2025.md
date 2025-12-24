@@ -6,7 +6,7 @@ permalink: /professional/stripe-ml-intern-2025
 venue: "San Francisco, CA"
 date: 2025-08-01
 header:
-  teaser: stripe-logo.jpg
+  teaser: stripe-logo.jpeg
 ---
 
 ## Duration

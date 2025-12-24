@@ -42,9 +42,9 @@
         <p class="publication__authors" style="margin-bottom: 0.25em;"><em>{{ post.type }}</em></p>
         {% endif %}
         
-        {% if post.venue or post.date %}
+        {% if post.venue %}
         <p class="publication__authors" style="margin-top: 0;">
-          {% if post.venue %}{{ post.venue }}{% endif %}{% if post.venue and post.date %}, {% endif %}{% if post.date %}{{ post.date | date: "%Y" }}{% endif %}
+          {{ post.venue }}
         </p>
         {% endif %}
       </div>
