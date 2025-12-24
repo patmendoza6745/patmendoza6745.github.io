@@ -6,7 +6,7 @@ permalink: /professional/stripe-swe-intern-2024
 venue: "New York, NY"
 date: 2024-08-01
 header:
-  teaser: stripe-logo.png
+  teaser: stripe-logo.jpg
 ---
 
 ## Duration
