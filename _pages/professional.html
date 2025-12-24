@@ -1,0 +1,19 @@
+---
+layout: archive
+title: "Professional Experience"
+permalink: /professional/
+author_profile: true
+---
+
+{% include base_path %}
+
+<p class="publication__header">I have had the privilege of working at leading technology companies in various roles. These experiences include:</p>
+
+<!-- Display all professional experience in chronological order (newest first) -->
+<div class="publication__list">
+{% assign sorted_professional = site.professional | sort: 'date' | reverse %}
+{% for post in sorted_professional %}
+  {% include archive-single-professional.html %}
+{% endfor %}
+</div>
+
