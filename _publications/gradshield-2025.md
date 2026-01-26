@@ -1,7 +1,7 @@
 ---
 title: "GradShield: Alignment Preserving Finetuning"
 collection: publications
-category: under_review
+category: published
 permalink: /publication/gradshield-2025
 date: 2025-10-07
 venue: 'ICLR 2026'
