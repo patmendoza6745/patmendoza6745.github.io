@@ -1,0 +1,141 @@
+/* Patrick Mendoza — site overrides */
+
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..40,400&display=swap");
+
+:root {
+  --global-bg-color: #fafaf9;
+  --global-footer-bg-color: #f0efec;
+  --global-border-color: #e8e6e1;
+  --global-dark-border-color: #d4d1c9;
+  --global-link-color: #3d5a80;
+  --global-link-color-hover: #293241;
+  --global-link-color-visited: #5c6b7a;
+  --global-masthead-link-color: #3d3d3d;
+  --global-masthead-link-color-hover: #1a1a1a;
+  --global-text-color: #2c2c2c;
+  --global-text-color-light: #6b6b6b;
+  --global-code-background-color: #f3f2ef;
+}
+
+html[data-theme="dark"] {
+  --global-bg-color: #141414;
+  --global-footer-bg-color: #1c1c1c;
+  --global-border-color: #2e2e2e;
+  --global-dark-border-color: #404040;
+  --global-link-color: #8ab4f8;
+  --global-link-color-hover: #c5d9fc;
+  --global-link-color-visited: #9eb0c8;
+  --global-masthead-link-color: #e8e8e8;
+  --global-masthead-link-color-hover: #ffffff;
+  --global-text-color: #e4e4e4;
+  --global-text-color-light: #a0a0a0;
+  --global-code-background-color: #222222;
+}
+
+body {
+  font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  letter-spacing: 0.01em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.masthead__menu-item--lg a {
+  font-family: "DM Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.page__content {
+  font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  max-width: 42rem;
+}
+
+.page__content h2 {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--global-text-color-light);
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-top: 2.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.page__content p {
+  margin-bottom: 1.25em;
+}
+
+.page__content a {
+  text-decoration-color: color-mix(in srgb, var(--global-link-color) 40%, transparent);
+  text-underline-offset: 0.15em;
+}
+
+.page__content strong {
+  font-weight: 600;
+  color: var(--global-text-color);
+}
+
+.masthead {
+  backdrop-filter: blur(10px);
+  background: color-mix(in srgb, var(--global-bg-color) 88%, transparent);
+}
+
+.masthead__menu-item a {
+  font-size: 0.9375rem;
+  font-weight: 500;
+}
+
+.masthead__menu-item--lg a {
+  font-size: 1.0625rem;
+}
+
+.author__avatar img {
+  border: none !important;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  padding: 0 !important;
+}
+
+html[data-theme="dark"] .author__avatar img {
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.35);
+}
+
+.sidebar .author__name {
+  font-size: 1.125rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.author__bio {
+  font-size: 0.875rem;
+  line-height: 1.45;
+  color: var(--global-text-color-light);
+}
+
+.author__urls a {
+  font-size: 0.875rem;
+}
+
+.author__desktop {
+  color: var(--global-text-color-light);
+  font-size: 0.875rem;
+}
+
+#main {
+  margin-top: 2.5rem;
+}
+
+.publication__button {
+  border-radius: 6px;
+}
+
+.page__footer {
+  font-size: 0.8125rem;
+}

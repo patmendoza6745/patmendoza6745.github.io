@@ -12,7 +12,7 @@ site_theme               : "default" # Currently available options are "default"
 title                    : "Patrick Mendoza"
 title_separator          : "-"
 name                     : &name "Patrick Mendoza"
-description              : &description "Patrick Mendoza's portfolio"   # Update this with a general description of your site, this is the default if not overridden by a page
+description              : &description "Patrick Mendoza — AI safety, alignment, and interpretability. Member of Technical Staff at xAI."
 url                      : https://patmendoza6745.github.io # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
                                                            # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -26,9 +26,9 @@ author:
   avatar           : "profile.jpg"
   name             : "Patrick Mendoza"
   pronouns         : # example: "she/her"  
-  bio              : ""
-  location         : "Miami Beach, FL, USA"
-  employer         : "xAI, UC Berkeley"
+  bio              : "Member of Technical Staff · xAI Post-Training"
+  location         : "San Francisco Bay Area"
+  employer         : "xAI"
   uri              : # URL
   email            : "patmendoza6745@berkeley.edu" 
 
