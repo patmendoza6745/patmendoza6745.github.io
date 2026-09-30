@@ -26,8 +26,8 @@ author:
   avatar           : "profile.jpg"
   name             : "Patrick Mendoza"
   pronouns         : # example: "she/her"  
-  bio              : "Member of Technical Staff · xAI Post-Training"
-  location         : "San Francisco Bay Area"
+  bio              :
+  location         : "San Francisco"
   employer         : "xAI"
   uri              : # URL
   email            : "patmendoza6745@berkeley.edu" 

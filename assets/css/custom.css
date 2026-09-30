@@ -1,8 +1,7 @@
 /* Patrick Mendoza — site overrides */
 
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..40,400&display=swap");
-
 :root {
+  --site-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   --global-bg-color: #fafaf9;
   --global-footer-bg-color: #f0efec;
   --global-border-color: #e8e6e1;
@@ -33,8 +32,12 @@ html[data-theme="dark"] {
 }
 
 body {
-  font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  letter-spacing: 0.01em;
+  font-family: var(--site-font);
+  font-weight: 400;
+  letter-spacing: 0;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  padding-bottom: 3rem;
 }
 
 h1,
@@ -43,30 +46,31 @@ h3,
 h4,
 h5,
 h6,
-.masthead__menu-item--lg a {
-  font-family: "DM Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+.page__title,
+.entry__title,
+.sidebar .author__name {
+  font-family: var(--site-font);
   font-weight: 600;
-  letter-spacing: -0.02em;
+  letter-spacing: 0;
 }
 
 .page__content {
-  font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
+  font-family: var(--site-font);
   font-size: 1.0625rem;
-  line-height: 1.75;
+  line-height: 1.6;
   max-width: 42rem;
 }
 
 .page__content h2 {
-  font-family: "DM Sans", sans-serif;
-  font-size: 0.8125rem;
+  font-size: 1.45rem;
   font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--global-text-color-light);
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--global-text-color);
   border-bottom: none;
   padding-bottom: 0;
   margin-top: 2.25rem;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.65rem;
 }
 
 .page__content p {
@@ -89,18 +93,36 @@ h6,
 }
 
 .masthead__menu-item a {
+  font-family: var(--site-font);
   font-size: 0.9375rem;
-  font-weight: 500;
+  font-weight: 400;
+  letter-spacing: 0;
 }
 
 .masthead__menu-item--lg a {
+  font-family: var(--site-font);
   font-size: 1.0625rem;
+  font-weight: 600;
+  letter-spacing: 0;
 }
 
 .author__avatar img {
+  display: block;
   border: none !important;
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
   padding: 0 !important;
+  margin: 0;
+}
+
+@media (min-width: 925px) {
+  .author__avatar img {
+    width: 148px;
+    height: 148px;
+    max-width: 100%;
+    object-fit: cover;
+    object-position: center 15%;
+    border-radius: 50%;
+  }
 }
 
 html[data-theme="dark"] .author__avatar img {
@@ -108,9 +130,26 @@ html[data-theme="dark"] .author__avatar img {
 }
 
 .sidebar .author__name {
-  font-size: 1.125rem;
+  font-family: var(--site-font);
+  font-size: 1.2rem;
   font-weight: 600;
-  letter-spacing: -0.02em;
+  letter-spacing: 0;
+  line-height: 1.15;
+  margin: 0.45rem 0 0.15rem;
+}
+
+.sidebar .author__urls {
+  margin-top: 0.35rem;
+}
+
+.sidebar .author__urls li {
+  line-height: 1.3;
+}
+
+.sidebar .author__urls a {
+  margin-bottom: 0.15rem;
+  padding-top: 0.12rem;
+  padding-bottom: 0.12rem;
 }
 
 .author__bio {
@@ -153,10 +192,11 @@ html[data-theme="dark"] .author__avatar img {
 
 .entry__title {
   margin: 0 0 0.3rem;
-  font-size: 1.0625rem;
+  font-family: var(--site-font);
+  font-size: 1.25rem;
   font-weight: 600;
-  letter-spacing: -0.02em;
-  line-height: 1.35;
+  letter-spacing: 0;
+  line-height: 1.3;
 }
 
 p.entry__meta {
@@ -183,9 +223,9 @@ p.entry__meta {
 .entry__body {
   margin-top: 0.75rem;
   max-width: 42rem;
-  font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
-  font-size: 1.02rem;
-  line-height: 1.65;
+  font-family: var(--site-font);
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
 .entry__body p,
@@ -214,6 +254,3 @@ p.entry__meta {
   margin-bottom: 0;
 }
 
-.page__footer {
-  font-size: 0.8125rem;
-}
