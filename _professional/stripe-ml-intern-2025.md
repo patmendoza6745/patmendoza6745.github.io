@@ -9,11 +9,7 @@ header:
   teaser: stripe-logo.jpeg
 ---
 
-## Duration
-
 May 2025 – Aug 2025
-
-## Responsibilities & Achievements
 
 * Developed Stripe's first standardized evaluation framework for RAG and Tool-Calling AI agents, enabling consistent benchmarking across user teams
 * Delivered a functional MVP that surfaces actionable insights to help agent authors identify, diagnose, and resolve failure modes

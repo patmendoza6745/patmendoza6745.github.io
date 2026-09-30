@@ -1,55 +1,23 @@
 {% include base_path %}
 
-{% if post.header.teaser %}
-  {% capture teaser %}{{ post.header.teaser }}{% endcapture %}
-{% else %}
-  {% assign teaser = site.teaser %}
-{% endif %}
-
 {% if post.id %}
-  {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
+  {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" | strip %}
 {% else %}
   {% assign title = post.title %}
 {% endif %}
 
-<div class="publication__item">
-  <article class="publication__item-content" itemscope itemtype="http://schema.org/CreativeWork">
-    <div class="publication__wrapper">
-      {% if teaser %}
-      <div class="publication__teaser teaching__teaser">
-        <img src=
-          {% if teaser contains "://" %}
-            "{{ teaser }}"
-          {% elsif teaser contains "/" %}
-            "{{ teaser | prepend: base_path }}"
-          {% else %}
-            "{{ teaser | prepend: "/images/" | prepend: base_path }}"
-          {% endif %}
-          alt="{{ title }}">
-      </div>
-      {% endif %}
-      
-      <div class="publication__body">
-        <h2 class="publication__title" itemprop="headline">
-          {% if post.link %}
-            <a href="{{ post.link }}">{{ title }}</a>
-          {% else %}
-            <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ title }}</a>
-          {% endif %}
-        </h2>
-        
-        {% if post.type %}
-        <p class="publication__authors" style="margin-bottom: 0.25em;"><em>{{ post.type }}</em></p>
-        {% endif %}
-        
-        {% if post.venue %}
-        <p class="publication__authors" style="margin-top: 0;">
-          {{ post.venue }}
-        </p>
-        {% endif %}
-      </div>
-    </div>
-  </article>
-</div>
+{% assign lead_html = post.content | split: '</p>' | first %}
+{% assign lead = lead_html | strip_html | strip %}
+{% assign rest = post.content | remove_first: lead_html | remove_first: '</p>' | strip %}
 
-
+<article class="entry">
+  <h2 class="entry__title">{{ title }}</h2>
+  <p class="entry__meta">
+    {% if post.type %}{{ post.type }}{% endif %}{% if post.type and post.venue %} · {% endif %}{% if post.venue %}{{ post.venue }}{% endif %}{% if lead != '' %}{% if post.type or post.venue %} · {% endif %}{{ lead }}{% endif %}
+  </p>
+  {% if rest != '' %}
+  <div class="entry__body">
+    {{ rest }}
+  </div>
+  {% endif %}
+</article>

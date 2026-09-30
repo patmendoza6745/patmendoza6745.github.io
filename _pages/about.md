@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-I'm a **Member of Technical Staff** at [xAI](https://x.ai/) on the Post-Training team. I'm especially interested in AI alignment and interpretability, with a particular emphasis on AI safety.
+I'm a **Member of Technical Staff** at [xAI](https://x.ai/) on the Post-Training team. I'm especially interested in alignment, interpretability, and RL.
 
 ## Background
 

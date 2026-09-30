@@ -9,11 +9,7 @@ header:
   teaser: stripe-logo.jpeg
 ---
 
-## Duration
-
 May 2024 – Aug 2024
-
-## Responsibilities & Achievements
 
 * Developed and deployed a Flink Application that would identify and auto-terminate degraded Hadoop nodes
 * Reduced node identification and termination from 45 to 0 minutes, a 100% improvement in response time

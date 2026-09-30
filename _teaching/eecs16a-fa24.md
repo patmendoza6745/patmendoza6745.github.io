@@ -9,12 +9,6 @@ header:
   teaser: eecs16a-logo.png
 ---
 
-## Description
-
-EECS 16A is an introductory-level course that introduces students to the systems side of EECS. It emphasizes systems that interact with the world from an informational point of view. Design-oriented modeling and analysis are important themes throughout this course, and we anticipate that you’ll learn many mathematical concepts, tools, and techniques along the way.
-
-## My Responsibilities
-
 * Grading homework and exams.
 * Debugging homework questions each week.
 * Composing exam questions with their solutions.

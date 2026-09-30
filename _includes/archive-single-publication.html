@@ -1,13 +1,7 @@
 {% include base_path %}
 
-{% if post.header.teaser %}
-  {% capture teaser %}{{ post.header.teaser }}{% endcapture %}
-{% else %}
-  {% assign teaser = site.teaser %}
-{% endif %}
-
 {% if post.id %}
-  {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
+  {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" | strip %}
 {% else %}
   {% assign title = post.title %}
 {% endif %}
@@ -17,65 +11,38 @@
   {% assign category_title = category_info.title | default: post.category | capitalize %}
 {% endif %}
 
-<div class="publication__item">
-  <article class="publication__item-content" itemscope itemtype="http://schema.org/CreativeWork">
-    <div class="publication__wrapper">
-      {% if teaser %}
-      <div class="publication__teaser">
-        <img src=
-          {% if teaser contains "://" %}
-            "{{ teaser }}"
-          {% elsif teaser contains "/" %}
-            "{{ teaser | prepend: base_path }}"
-          {% else %}
-            "{{ teaser | prepend: "/images/" | prepend: base_path }}"
-          {% endif %}
-          alt="{{ title }}">
-      </div>
-      {% endif %}
-      
-      <div class="publication__body">
-        <h2 class="publication__title" itemprop="headline">
-          {% if post.link %}
-            <a href="{{ post.link }}">{{ title }}</a>
-          {% else %}
-            <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ title }}</a>
-          {% endif %}
-        </h2>
-        
-        {% if post.authors %}
-        <p class="publication__authors">
-          {% assign author_name = site.author.name %}
-          {% assign authors_text = post.authors %}
-          {% assign bolded_name = '<strong>' | append: author_name | append: '</strong>' %}
-          {{ authors_text | replace: author_name, bolded_name }}
-        </p>
-        {% endif %}
-        
-        {% if post.category %}
-        <span class="publication__status publication__status--{{ post.category }}">
-          {% if post.category == 'under_review' and post.venue %}
-            Under review at <em>{{ post.venue }}</em>
-          {% elsif post.category == 'preprint' %}
-            {{ category_title }}
-          {% elsif post.venue %}
-            <em>{{ post.venue }}</em>
-          {% else %}
-            {{ category_title }}
-          {% endif %}
-        </span>
-        {% endif %}
-        
-        <div class="publication__actions">
-          {% if post.bibtexurl %}
-          <a href="{{ post.bibtexurl }}" class="publication__button publication__button--bib" target="_blank">BIB</a>
-          {% endif %}
-          {% if post.paperurl %}
-          <a href="{{ post.paperurl }}" class="publication__button publication__button--pdf" target="_blank">PDF</a>
-          {% endif %}
-        </div>
-      </div>
-    </div>
-  </article>
-</div>
+{% assign abstract = post.content | split: '</h2>' | last | strip %}
 
+<article class="entry">
+  <h2 class="entry__title">{{ title }}</h2>
+
+  {% if post.authors %}
+  <p class="entry__meta">
+    {% assign author_name = site.author.name %}
+    {% assign bolded_name = '<strong>' | append: author_name | append: '</strong>' %}
+    {{ post.authors | replace: author_name, bolded_name }}
+  </p>
+  {% endif %}
+
+  <p class="entry__meta">
+    {% if post.category == 'under_review' and post.venue %}
+      Under review at <em>{{ post.venue }}</em>
+    {% elsif post.venue and post.venue != '' %}
+      <em>{{ post.venue }}</em>
+    {% elsif category_title %}
+      {{ category_title }}
+    {% endif %}
+    {% if post.paperurl or post.bibtexurl %}
+      {% if post.venue or category_title %} · {% endif %}
+      {% if post.paperurl %}<a href="{{ post.paperurl }}" target="_blank" rel="noopener">pdf</a>{% endif %}
+      {% if post.paperurl and post.bibtexurl %} · {% endif %}
+      {% if post.bibtexurl %}<a href="{{ post.bibtexurl }}" target="_blank" rel="noopener">bib</a>{% endif %}
+    {% endif %}
+  </p>
+
+  {% if abstract != '' %}
+  <div class="entry__body">
+    {{ abstract }}
+  </div>
+  {% endif %}
+</article>

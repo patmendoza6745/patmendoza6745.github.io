@@ -4,7 +4,7 @@ collection: publications
 category: published
 permalink: /publication/gradshield-2025
 date: 2025-10-07
-venue: 'ICLR 2026'
+venue: 'NeurIPS 2026'
 authors: 'Zhanhao Hu*, Xiao Huang*, Patrick Mendoza, Emad A. Alghamdi, Raluca Ada Popa, David Wagner'
 header:
   teaser: gradshield.png
