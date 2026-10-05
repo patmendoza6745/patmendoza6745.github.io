@@ -1,18 +1,4 @@
 ---
-layout: archive
-title: "Teaching"
 permalink: /teaching/
-author_profile: true
+redirect_to: /#teaching
 ---
-
-{% include base_path %}
-
-<p class="publication__header">I have been fortunate to be on course staff for three separate courses. These were:</p>
-
-<!-- Display all teaching in chronological order (newest first) -->
-<div class="publication__list">
-{% assign sorted_teaching = site.teaching | sort: 'date' | reverse %}
-{% for post in sorted_teaching %}
-  {% include archive-single-teaching.html %}
-{% endfor %}
-</div>

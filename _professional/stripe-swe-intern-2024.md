@@ -11,8 +11,5 @@ header:
 
 May 2024 – Aug 2024
 
-* Developed and deployed a Flink Application that would identify and auto-terminate degraded Hadoop nodes
-* Reduced node identification and termination from 45 to 0 minutes, a 100% improvement in response time
-* Decreased the number of pages for potentially bad nodes from 30 pages/month to 9 pages/month, a 70% reduction
-* Created an efficient and scalable heuristic algorithm to identify bad nodes with a 90% success rate
+Wrote a Flink job that found degraded Hadoop nodes and turned them off, which took that from 45 minutes down to zero. Pages for bad nodes dropped from 30 a month to 9, and the heuristic caught about 90% of them.
 

@@ -9,6 +9,4 @@ header:
   teaser: eecs182-logo.png
 ---
 
-* Grading the final exam and final project.
-* Composing homework and exam questions with their solutions.
-* Teaching two discussion sections per week.
+Graded the final and the project, wrote homework and exam questions, and taught two discussions a week.

@@ -1,19 +1,4 @@
 ---
-layout: archive
-title: "Professional"
 permalink: /professional/
-author_profile: true
+redirect_to: /#work
 ---
-
-{% include base_path %}
-
-<p class="publication__header">Places I've worked, most recent first.</p>
-
-<!-- Display all professional experience in chronological order (newest first) -->
-<div class="publication__list">
-{% assign sorted_professional = site.professional | sort: 'date' | reverse %}
-{% for post in sorted_professional %}
-  {% include archive-single-professional.html %}
-{% endfor %}
-</div>
-

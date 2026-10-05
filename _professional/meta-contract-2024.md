@@ -11,7 +11,5 @@ header:
 
 Sep 2024 – Jan 2025
 
-* Developed and optimized ML models, achieving 91.9% bitwise accuracy in predicting video encoding partitions
-* Designed ML-driven video compression strategies based on SVT-AV1, reducing compute to 10-20% of brute-force methods while maintaining 5-6% encoding quality loss
-* Built end-to-end ML pipelines which include data generation, training, and inference scripts, processing ~60GB of data and 10 million data points to support model development and deployment
+Trained models that guess video encoding partitions at 91.9% bitwise accuracy, then used them to cut an SVT-AV1 search down to 10–20% of brute force, with about 5–6% quality loss. The pipelines ran over ~60GB and 10 million examples.
 

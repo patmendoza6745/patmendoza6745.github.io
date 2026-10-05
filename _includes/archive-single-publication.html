@@ -40,7 +40,7 @@
     {% endif %}
   </p>
 
-  {% if abstract != '' %}
+  {% if abstract != '' and page.layout != 'home' %}
   <div class="entry__body">
     {{ abstract }}
   </div>

@@ -6,21 +6,6 @@
   {% assign title = post.title %}
 {% endif %}
 
-<article class="entry">
-  <h2 class="entry__title">{{ title }}</h2>
-  <p class="entry__meta">
-    {% if post.type %}{{ post.type }}{% endif %}{% if post.type and post.venue %} · {% endif %}{% if post.venue %}{{ post.venue }}{% endif %}{% if post.date %}{% if post.type or post.venue %} · {% endif %}
-      {% assign month = post.date | date: "%m" | plus: 0 %}
-      {% if month >= 1 and month <= 5 %}
-        Spring {{ post.date | date: "%Y" }}
-      {% elsif month >= 6 and month <= 7 %}
-        Summer {{ post.date | date: "%Y" }}
-      {% else %}
-        Fall {{ post.date | date: "%Y" }}
-      {% endif %}
-    {% endif %}
-  </p>
-  <div class="entry__body">
-    {{ post.content }}
-  </div>
-</article>
+{% assign duties = post.content | markdownify | strip_html | strip | downcase %}
+
+<p class="teaching__line">{{ title | downcase }} - {{ post.type }} - {{ duties }}</p>

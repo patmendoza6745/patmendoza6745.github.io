@@ -9,10 +9,7 @@ header:
   teaser: eecs16a-logo.png
 ---
 
-* Grading homework and exams.
-* Debugging homework questions each week.
-* Composing exam questions with their solutions.
-* Running two or more office hours per week.
+Graded, debugged the homework each week, wrote exam questions, and held office hours.
 
 
 

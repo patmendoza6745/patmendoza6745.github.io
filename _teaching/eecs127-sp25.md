@@ -9,4 +9,4 @@ header:
   teaser: eecs127-logo.jpg
 ---
 
-* Grading homework and exams.
+Graded homework and exams.
