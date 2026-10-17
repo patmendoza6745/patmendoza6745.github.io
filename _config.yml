@@ -12,7 +12,7 @@ site_theme               : "default" # Currently available options are "default"
 title                    : "Patrick Mendoza"
 title_separator          : "-"
 name                     : &name "Patrick Mendoza"
-description              : &description "Patrick Mendoza — AI safety, alignment, and interpretability. Member of Technical Staff at xAI."
+description              : &description ""
 url                      : https://patmendoza6745.github.io # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
                                                            # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
