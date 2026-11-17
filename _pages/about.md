@@ -13,7 +13,6 @@ redirect_from:
 <div class="home__blurb">
 <p class="home__links">
   San Francisco
-  · xAI
   · <a href="mailto:{{ site.author.email }}">email</a>
   · <a href="{{ site.author.googlescholar }}">scholar</a>
   · <a href="{{ site.author.orcid }}">orcid</a>
